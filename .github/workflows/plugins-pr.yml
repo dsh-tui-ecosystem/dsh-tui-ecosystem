@@ -1,0 +1,102 @@
+name: plugins-pr
+# PR 改 plugins.json 时自动校验收录标准 → AI 审查 → 通过后自动合并
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - plugins.json
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    name: 收录标准校验
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 运行校验
+        run: node .github/scripts/validate-plugins.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+
+  ai-review:
+    name: AI 审查
+    needs: validate
+    if: secrets.DEEPSEEK_API_KEY != ''
+    runs-on: ubuntu-latest
+    outputs:
+      verdict: ${{ steps.ai.outputs.verdict }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: DeepSeek 审查
+        id: ai
+        uses: actions/github-script@v7
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        with:
+          script: |
+            const key = process.env.DEEPSEEK_API_KEY
+            if (!key) { core.setOutput('verdict', 'skipped'); return }
+            const { owner, repo } = context.repo
+            const pr = context.payload.pull_request
+            const diffRes = await github.rest.pulls.get({
+              owner, repo, pull_number: pr.number, mediaType: { format: 'diff' },
+            })
+            const diff = String(diffRes.data).slice(0, 12000)
+            const prompt =
+              '你是 dsh-TUI 插件市场的收录审核员。下面是一个修改 plugins.json 的 PR diff。' +
+              '请判断新增的插件条目是否值得收录：描述是否清晰真实、是否为垃圾/广告/与 dsh-TUI 无关的内容。' +
+              '只输出 JSON：{"verdict":"PASS"|"FLAG","reason":"一句话中文理由"}\n\n' +
+              `PR 标题：${pr.title}\n\nDIFF:\n${diff}`
+            const res = await fetch('https://api.deepseek.com/chat/completions', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` },
+              body: JSON.stringify({
+                model: 'deepseek-chat',
+                messages: [{ role: 'user', content: prompt }],
+                temperature: 0.2,
+                max_tokens: 300,
+              }),
+            })
+            const body = await res.json()
+            const text = body?.choices?.[0]?.message?.content || '{"verdict":"FLAG","reason":"AI 审查无响应"}'
+            let verdict = 'FLAG'
+            let reason = text
+            try {
+              const j = JSON.parse(text)
+              verdict = j.verdict === 'PASS' ? 'PASS' : 'FLAG'
+              reason = j.reason || text
+            } catch {}
+            await github.rest.issues.createComment({
+              owner, repo, issue_number: pr.number,
+              body: `🤖 AI 审查：**${verdict}** — ${reason}`,
+            })
+            core.setOutput('verdict', verdict)
+            if (verdict === 'FLAG') core.setFailed('AI 审查标记为需要人工复核')
+
+  merge:
+    name: 自动合并
+    needs: [validate, ai-review]
+    if: always() && needs.validate.result == 'success' && (needs.ai-review.result == 'success' || needs.ai-review.result == 'skipped')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo
+            const pr = context.payload.pull_request
+            await github.rest.pulls.createReview({
+              owner, repo, pull_number: pr.number,
+              event: 'APPROVE',
+              body: '✅ 收录标准校验通过，自动合并',
+            })
+            await github.rest.pulls.merge({ owner, repo, pull_number: pr.number, merge_method: 'squash' })
