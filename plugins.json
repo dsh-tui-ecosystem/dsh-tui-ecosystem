@@ -164,6 +164,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
+    },
+    {
+      "name": "dsh-tui-market",
+      "displayName": "TUI 插件市场",
+      "description": "TUI 内的插件市场：/market 浏览官方精选、/market all 全网总榜、/market search 搜索 GitHub topic，多选安装、卸载、已装清单，全程不离终端。",
+      "author": "FUSU123fusu",
+      "repo": "https://github.com/FUSU123fusu/dsh-tui-market",
+      "npm": null,
+      "tags": [
+        "插件市场",
+        "marketplace",
+        "工具"
+      ],
+      "kind": "plugin",
+      "addedAt": "2026-08-17"
     }
   ]
 }
