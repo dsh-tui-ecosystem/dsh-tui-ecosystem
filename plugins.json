@@ -100,12 +100,12 @@
     },
     {
       "name": "dsh-browser4",
-      "displayName": "dsh-browser4",
-      "description": "解决 dsh 自由上网冲浪的问题：浏览器使用，大规模网页浏览，混合智能网页挖掘。",
+      "displayName": "Browser4",
+      "description": "AI 原生浏览器引擎：让 Agent 驱动真实浏览器，支持智能提取、大规模网页访问、X-SQL 查询与经验复用。dsh plugin add github:platonai/dsh-browser4 一键安装。",
       "author": "platonai",
       "repo": "https://github.com/platonai/dsh-browser4",
       "npm": null,
-      "tags": ["agent-browser", "ai-browser", "browser-os", "web-mining", "web-scraping", "crawler"],
+      "tags": ["agent-browser", "ai-browser", "browser-os", "web-mining", "web-scraping", "crawler", "浏览器", "自动化"],
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
