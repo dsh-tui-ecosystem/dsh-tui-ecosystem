@@ -23,7 +23,7 @@
       "npm": "https://www.npmjs.com/package/dsh-working-activity",
       "tags": ["官方", "状态栏", "工作行"],
       "kind": "plugin",
-      "featured": true,
+      "featured": false,
       "addedAt": "2026-08-16"
     },
     {
