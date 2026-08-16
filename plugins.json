@@ -145,6 +145,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
+    },
+    {
+      "name": "dsh-tui-list-test",
+      "displayName": "dsh-tui-list-test",
+      "description": "??? dsh-TUI ??????????,???????????????",
+      "author": "ccch1mneyyy",
+      "repo": "https://github.com/ccch1mneyyy/dsh-tui-list-test",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "??"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-16"
     }
   ]
 }
