@@ -9,7 +9,11 @@
       "author": "ccch1mneyyy",
       "repo": "https://github.com/ccch1mneyyy/dsh-TUI",
       "npm": "https://www.npmjs.com/package/@deepseek-harness-tui/dsh-tui",
-      "tags": ["官方", "TUI", "核心"],
+      "tags": [
+        "官方",
+        "TUI",
+        "核心"
+      ],
       "kind": "core",
       "featured": true,
       "addedAt": "2026-08-16"
@@ -21,7 +25,11 @@
       "author": "ccch1mneyyy",
       "repo": "https://github.com/ccch1mneyyy/working-activity",
       "npm": "https://www.npmjs.com/package/dsh-working-activity",
-      "tags": ["官方", "状态栏", "工作行"],
+      "tags": [
+        "官方",
+        "状态栏",
+        "工作行"
+      ],
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
@@ -33,7 +41,10 @@
       "author": "dsh-tui-ecosystem",
       "repo": "https://github.com/dsh-tui-ecosystem/plugin-template",
       "npm": null,
-      "tags": ["模板", "官方"],
+      "tags": [
+        "模板",
+        "官方"
+      ],
       "kind": "template",
       "featured": false,
       "addedAt": "2026-08-16"
@@ -45,7 +56,10 @@
       "author": "ayuanwong",
       "repo": "https://github.com/ayuanwong/deepseek-harness-ux",
       "npm": null,
-      "tags": ["UI", "可观测"],
+      "tags": [
+        "UI",
+        "可观测"
+      ],
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
@@ -57,7 +71,10 @@
       "author": "huiliyi37",
       "repo": "https://github.com/huiliyi37/dsh-tianshu-tui",
       "npm": null,
-      "tags": ["TUI", "主题"],
+      "tags": [
+        "TUI",
+        "主题"
+      ],
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
@@ -69,7 +86,10 @@
       "author": "omdsh-dev",
       "repo": "https://github.com/omdsh-dev/dsh-data-agent",
       "npm": null,
-      "tags": ["数据库", "Agent"],
+      "tags": [
+        "数据库",
+        "Agent"
+      ],
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
@@ -81,7 +101,10 @@
       "author": "btspoony",
       "repo": "https://github.com/omdsh-dev/dsh-advisor",
       "npm": "dsh-advisor",
-      "tags": ["Advisor", "Agent"],
+      "tags": [
+        "Advisor",
+        "Agent"
+      ],
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
@@ -93,7 +116,13 @@
       "author": "btspoony",
       "repo": "https://github.com/omdsh-dev/dsh-llm-fallbacks",
       "npm": "dsh-llm-fallbacks",
-      "tags": ["Fallbacks", "Roles", "Subgent", "角色", "降级链"],
+      "tags": [
+        "Fallbacks",
+        "Roles",
+        "Subgent",
+        "角色",
+        "降级链"
+      ],
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
@@ -105,7 +134,28 @@
       "author": "platonai",
       "repo": "https://github.com/platonai/dsh-browser4",
       "npm": null,
-      "tags": ["agent-browser", "ai-browser", "browser-os", "web-mining", "web-scraping", "crawler"],
+      "tags": [
+        "agent-browser",
+        "ai-browser",
+        "browser-os",
+        "web-mining",
+        "web-scraping",
+        "crawler"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-16"
+    },
+    {
+      "name": "dsh-tui-list-test",
+      "displayName": "dsh-tui-list-test",
+      "description": "自动收录链路测试：README 已含链接，应自动收录",
+      "author": "ccch1mneyyy",
+      "repo": "https://github.com/ccch1mneyyy/dsh-tui-list-test",
+      "npm": null,
+      "tags": [
+        "test"
+      ],
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
