@@ -3,6 +3,30 @@
   "updatedAt": "2026-08-16",
   "plugins": [
     {
+      "name": "dsh-tui",
+      "displayName": "dsh-TUI",
+      "description": "本体：Claude Code 风格全屏终端交互——像素鲸鱼顶栏、实时工作状态行、思考流式展开、双击 Esc 回滚、上下文进度条 + TPS 仪表。零核心改动，纯插件挂载，装上即用。",
+      "author": "ccch1mneyyy",
+      "repo": "https://github.com/ccch1mneyyy/dsh-TUI",
+      "npm": "https://www.npmjs.com/package/@deepseek-harness-tui/dsh-tui",
+      "tags": ["官方", "TUI", "核心"],
+      "kind": "core",
+      "featured": true,
+      "addedAt": "2026-08-16"
+    },
+    {
+      "name": "working-activity",
+      "displayName": "working-activity",
+      "description": "灵动工作行扩展：让 pi CLI / DSH 的工作状态行活起来，实时活动文案一眼可见。dsh plugin add dsh-working-activity 一键安装。",
+      "author": "ccch1mneyyy",
+      "repo": "https://github.com/ccch1mneyyy/working-activity",
+      "npm": "https://www.npmjs.com/package/dsh-working-activity",
+      "tags": ["官方", "状态栏", "工作行"],
+      "kind": "plugin",
+      "featured": true,
+      "addedAt": "2026-08-16"
+    },
+    {
       "name": "plugin-template",
       "displayName": "Plugin Template",
       "description": "官方起步模板：完整 Cordis 契约、会话事件与类型注册、可选 TUI prompt 槽位、打包技能、主题资产。从零到一个能跑的插件，5 分钟起步。",
@@ -11,7 +35,7 @@
       "npm": null,
       "tags": ["模板", "官方"],
       "kind": "template",
-      "featured": true,
+      "featured": false,
       "addedAt": "2026-08-16"
     },
     {
