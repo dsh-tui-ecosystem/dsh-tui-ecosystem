@@ -97,6 +97,18 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
+    },
+    {
+      "name": "dsh-browser4",
+      "displayName": "dsh-browser4",
+      "description": "解决 dsh 自由上网冲浪的问题：浏览器使用，大规模网页浏览，混合智能网页挖掘。",
+      "author": "platonai",
+      "repo": "https://github.com/platonai/dsh-browser4",
+      "npm": null,
+      "tags": ["agent-browser", "ai-browser", "browser-os", "web-mining", "web-scraping", "crawler"],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-16"
     }
   ]
 }
