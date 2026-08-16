@@ -73,6 +73,30 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
+    },
+    {
+      "name": "dsh-advisor",
+      "displayName": "Advisor",
+      "description": "Advisor - Pair a second model that passively reviews each turn and injects notes. 搭配一个会在每轮对话被动注入见解和审查的副模型。",
+      "author": "btspoony",
+      "repo": "https://github.com/omdsh-dev/dsh-advisor",
+      "npm": "dsh-advisor",
+      "tags": ["Advisor", "Agent"],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-16"
+    },
+    {
+      "name": "dsh-llm-fallbacks",
+      "displayName": "Agent Roles & Fallbacks",
+      "description": "An dsh plugin for role-based LLM retry&fallback strategy. 基于角色的模型重试备用策略插件",
+      "author": "btspoony",
+      "repo": "https://github.com/omdsh-dev/dsh-llm-fallbacks",
+      "npm": "dsh-llm-fallbacks",
+      "tags": ["Fallbacks", "Roles", "Subgent", "角色", "降级链"],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-16"
     }
   ]
 }
