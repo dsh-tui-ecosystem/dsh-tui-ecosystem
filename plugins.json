@@ -1,165 +1,165 @@
-{
-  "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-16",
-  "plugins": [
-    {
-      "name": "dsh-tui",
-      "displayName": "dsh-TUI",
-      "description": "本体：Claude Code 风格全屏终端交互——像素鲸鱼顶栏、实时工作状态行、思考流式展开、双击 Esc 回滚、上下文进度条 + TPS 仪表。零核心改动，纯插件挂载，装上即用。",
-      "author": "ccch1mneyyy",
-      "repo": "https://github.com/ccch1mneyyy/dsh-TUI",
-      "npm": "https://www.npmjs.com/package/@deepseek-harness-tui/dsh-tui",
-      "tags": [
-        "官方",
-        "TUI",
-        "核心"
-      ],
-      "kind": "core",
-      "featured": true,
-      "addedAt": "2026-08-16"
-    },
-    {
-      "name": "working-activity",
-      "displayName": "working-activity",
-      "description": "灵动工作行扩展：让 pi CLI / DSH 的工作状态行活起来，实时活动文案一眼可见。dsh plugin add dsh-working-activity 一键安装。",
-      "author": "ccch1mneyyy",
-      "repo": "https://github.com/ccch1mneyyy/working-activity",
-      "npm": "https://www.npmjs.com/package/dsh-working-activity",
-      "tags": [
-        "官方",
-        "状态栏",
-        "工作行"
-      ],
-      "kind": "plugin",
-      "featured": false,
-      "addedAt": "2026-08-16"
-    },
-    {
-      "name": "plugin-template",
-      "displayName": "Plugin Template",
-      "description": "官方起步模板：完整 Cordis 契约、会话事件与类型注册、可选 TUI prompt 槽位、打包技能、主题资产。从零到一个能跑的插件，5 分钟起步。",
-      "author": "dsh-tui-ecosystem",
-      "repo": "https://github.com/dsh-tui-ecosystem/plugin-template",
-      "npm": null,
-      "tags": [
-        "模板",
-        "官方"
-      ],
-      "kind": "template",
-      "featured": false,
-      "addedAt": "2026-08-16"
-    },
-    {
-      "name": "deepseek-harness-ux",
-      "displayName": "deepseek-harness-ux",
-      "description": "让你的 DeepSeek Harness 工作过程一目了然！",
-      "author": "ayuanwong",
-      "repo": "https://github.com/ayuanwong/deepseek-harness-ux",
-      "npm": null,
-      "tags": [
-        "UI",
-        "可观测"
-      ],
-      "kind": "plugin",
-      "featured": false,
-      "addedAt": "2026-08-16"
-    },
-    {
-      "name": "dsh-tianshu-tui",
-      "displayName": "dsh-tianshu-tui",
-      "description": "Tianshu 风格的 dsh-tui。",
-      "author": "huiliyi37",
-      "repo": "https://github.com/huiliyi37/dsh-tianshu-tui",
-      "npm": null,
-      "tags": [
-        "TUI",
-        "主题"
-      ],
-      "kind": "plugin",
-      "featured": false,
-      "addedAt": "2026-08-16"
-    },
-    {
-      "name": "dsh-data-agent",
-      "displayName": "dsh-data-agent",
-      "description": "让 AI 帮你连数据库。",
-      "author": "omdsh-dev",
-      "repo": "https://github.com/omdsh-dev/dsh-data-agent",
-      "npm": null,
-      "tags": [
-        "数据库",
-        "Agent"
-      ],
-      "kind": "plugin",
-      "featured": false,
-      "addedAt": "2026-08-16"
-    },
-    {
-      "name": "dsh-advisor",
-      "displayName": "Advisor",
-      "description": "Advisor - Pair a second model that passively reviews each turn and injects notes. 搭配一个会在每轮对话被动注入见解和审查的副模型。",
-      "author": "btspoony",
-      "repo": "https://github.com/omdsh-dev/dsh-advisor",
-      "npm": "dsh-advisor",
-      "tags": [
-        "Advisor",
-        "Agent"
-      ],
-      "kind": "plugin",
-      "featured": false,
-      "addedAt": "2026-08-16"
-    },
-    {
-      "name": "dsh-llm-fallbacks",
-      "displayName": "Agent Roles & Fallbacks",
-      "description": "An dsh plugin for role-based LLM retry&fallback strategy. 基于角色的模型重试备用策略插件",
-      "author": "btspoony",
-      "repo": "https://github.com/omdsh-dev/dsh-llm-fallbacks",
-      "npm": "dsh-llm-fallbacks",
-      "tags": [
-        "Fallbacks",
-        "Roles",
-        "Subgent",
-        "角色",
-        "降级链"
-      ],
-      "kind": "plugin",
-      "featured": false,
-      "addedAt": "2026-08-16"
-    },
-    {
-      "name": "dsh-browser4",
-      "displayName": "dsh-browser4",
-      "description": "解决 dsh 自由上网冲浪的问题：浏览器使用，大规模网页浏览，混合智能网页挖掘。",
-      "author": "platonai",
-      "repo": "https://github.com/platonai/dsh-browser4",
-      "npm": null,
-      "tags": [
-        "agent-browser",
-        "ai-browser",
-        "browser-os",
-        "web-mining",
-        "web-scraping",
-        "crawler"
-      ],
-      "kind": "plugin",
-      "featured": false,
-      "addedAt": "2026-08-16"
-    },
-    {
-      "name": "dsh-tui-list-test",
-      "displayName": "dsh-tui-list-test",
-      "description": "??? dsh-TUI ??????????,???????????????",
-      "author": "ccch1mneyyy",
-      "repo": "https://github.com/ccch1mneyyy/dsh-tui-list-test",
-      "npm": null,
-      "tags": [
-        "TUI",
-        "??"
-      ],
-      "kind": "plugin",
-      "featured": false,
-      "addedAt": "2026-08-16"
-    }
-  ]
+﻿{
+    "$schema":  "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
+    "updatedAt":  "2026-08-16",
+    "plugins":  [
+                    {
+                        "name":  "dsh-tui",
+                        "displayName":  "dsh-TUI",
+                        "description":  "本体：Claude Code 风格全屏终端交互——像素鲸鱼顶栏、实时工作状态行、思考流式展开、双击 Esc 回滚、上下文进度条 + TPS 仪表。零核心改动，纯插件挂载，装上即用。",
+                        "author":  "ccch1mneyyy",
+                        "repo":  "https://github.com/ccch1mneyyy/dsh-TUI",
+                        "npm":  "https://www.npmjs.com/package/@deepseek-harness-tui/dsh-tui",
+                        "tags":  [
+                                     "官方",
+                                     "TUI",
+                                     "核心"
+                                 ],
+                        "kind":  "core",
+                        "featured":  true,
+                        "addedAt":  "2026-08-16"
+                    },
+                    {
+                        "name":  "working-activity",
+                        "displayName":  "working-activity",
+                        "description":  "灵动工作行扩展：让 pi CLI / DSH 的工作状态行活起来，实时活动文案一眼可见。dsh plugin add dsh-working-activity 一键安装。",
+                        "author":  "ccch1mneyyy",
+                        "repo":  "https://github.com/ccch1mneyyy/working-activity",
+                        "npm":  "https://www.npmjs.com/package/dsh-working-activity",
+                        "tags":  [
+                                     "官方",
+                                     "状态栏",
+                                     "工作行"
+                                 ],
+                        "kind":  "plugin",
+                        "featured":  false,
+                        "addedAt":  "2026-08-16"
+                    },
+                    {
+                        "name":  "plugin-template",
+                        "displayName":  "Plugin Template",
+                        "description":  "官方起步模板：完整 Cordis 契约、会话事件与类型注册、可选 TUI prompt 槽位、打包技能、主题资产。从零到一个能跑的插件，5 分钟起步。",
+                        "author":  "dsh-tui-ecosystem",
+                        "repo":  "https://github.com/dsh-tui-ecosystem/plugin-template",
+                        "npm":  null,
+                        "tags":  [
+                                     "模板",
+                                     "官方"
+                                 ],
+                        "kind":  "template",
+                        "featured":  false,
+                        "addedAt":  "2026-08-16"
+                    },
+                    {
+                        "name":  "deepseek-harness-ux",
+                        "displayName":  "deepseek-harness-ux",
+                        "description":  "让你的 DeepSeek Harness 工作过程一目了然！",
+                        "author":  "ayuanwong",
+                        "repo":  "https://github.com/ayuanwong/deepseek-harness-ux",
+                        "npm":  null,
+                        "tags":  [
+                                     "UI",
+                                     "可观测"
+                                 ],
+                        "kind":  "plugin",
+                        "featured":  false,
+                        "addedAt":  "2026-08-16"
+                    },
+                    {
+                        "name":  "dsh-tianshu-tui",
+                        "displayName":  "dsh-tianshu-tui",
+                        "description":  "Tianshu 风格的 dsh-tui。",
+                        "author":  "huiliyi37",
+                        "repo":  "https://github.com/huiliyi37/dsh-tianshu-tui",
+                        "npm":  null,
+                        "tags":  [
+                                     "TUI",
+                                     "主题"
+                                 ],
+                        "kind":  "plugin",
+                        "featured":  false,
+                        "addedAt":  "2026-08-16"
+                    },
+                    {
+                        "name":  "dsh-data-agent",
+                        "displayName":  "dsh-data-agent",
+                        "description":  "让 AI 帮你连数据库。",
+                        "author":  "omdsh-dev",
+                        "repo":  "https://github.com/omdsh-dev/dsh-data-agent",
+                        "npm":  null,
+                        "tags":  [
+                                     "数据库",
+                                     "Agent"
+                                 ],
+                        "kind":  "plugin",
+                        "featured":  false,
+                        "addedAt":  "2026-08-16"
+                    },
+                    {
+                        "name":  "dsh-advisor",
+                        "displayName":  "Advisor",
+                        "description":  "Advisor - Pair a second model that passively reviews each turn and injects notes. 搭配一个会在每轮对话被动注入见解和审查的副模型。",
+                        "author":  "btspoony",
+                        "repo":  "https://github.com/omdsh-dev/dsh-advisor",
+                        "npm":  "dsh-advisor",
+                        "tags":  [
+                                     "Advisor",
+                                     "Agent"
+                                 ],
+                        "kind":  "plugin",
+                        "featured":  false,
+                        "addedAt":  "2026-08-16"
+                    },
+                    {
+                        "name":  "dsh-llm-fallbacks",
+                        "displayName":  "Agent Roles \u0026 Fallbacks",
+                        "description":  "An dsh plugin for role-based LLM retry\u0026fallback strategy. 基于角色的模型重试备用策略插件",
+                        "author":  "btspoony",
+                        "repo":  "https://github.com/omdsh-dev/dsh-llm-fallbacks",
+                        "npm":  "dsh-llm-fallbacks",
+                        "tags":  [
+                                     "Fallbacks",
+                                     "Roles",
+                                     "Subgent",
+                                     "角色",
+                                     "降级链"
+                                 ],
+                        "kind":  "plugin",
+                        "featured":  false,
+                        "addedAt":  "2026-08-16"
+                    },
+                    {
+                        "name":  "dsh-browser4",
+                        "displayName":  "dsh-browser4",
+                        "description":  "解决 dsh 自由上网冲浪的问题：浏览器使用，大规模网页浏览，混合智能网页挖掘。",
+                        "author":  "platonai",
+                        "repo":  "https://github.com/platonai/dsh-browser4",
+                        "npm":  null,
+                        "tags":  [
+                                     "agent-browser",
+                                     "ai-browser",
+                                     "browser-os",
+                                     "web-mining",
+                                     "web-scraping",
+                                     "crawler"
+                                 ],
+                        "kind":  "plugin",
+                        "featured":  false,
+                        "addedAt":  "2026-08-16"
+                    },
+                    {
+                        "name":  "dsh-tui-list-test",
+                        "displayName":  "dsh-tui-list-test",
+                        "description":  "??? dsh-TUI ??????????,???????????????",
+                        "author":  "ccch1mneyyy",
+                        "repo":  "https://github.com/ccch1mneyyy/dsh-tui-list-test",
+                        "npm":  null,
+                        "tags":  [
+                                     "TUI",
+                                     "??"
+                                 ],
+                        "kind":  "plugin",
+                        "featured":  false,
+                        "addedAt":  "2026-08-16"
+                    }
+                ]
 }
