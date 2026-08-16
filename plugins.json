@@ -145,6 +145,25 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
+    },
+    {
+      "name": "dsh-mini-tui",
+      "displayName": "dsh-mini-tui",
+      "description": "DeepSeek Harness 的独立极简终端界面插件：保留完整 Agent 与工具能力，默认隐藏冗长执行过程，并支持在任意目录右键启动。",
+      "author": "boxeryao",
+      "repo": "https://github.com/boxeryao/dsh-mini-tui",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "UI",
+        "Agent",
+        "Windows",
+        "终端",
+        "极简"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-16"
     }
   ]
 }
