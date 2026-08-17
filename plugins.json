@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-16",
+  "updatedAt": "2026-08-17",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -164,6 +164,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-16"
+    },
+    {
+      "name": "dsh-tui-checkpoints",
+      "displayName": "dsh-tui-checkpoints",
+      "description": "为 dsh-TUI 补上文件级真回溯：每轮自动把工作区快照进影子 git 仓库，用 /checkpoints 浏览并按轮恢复文件，配合内置对话回溯实现两段式对齐。安装：dsh plugin add dsh-tui-checkpoints",
+      "author": "FUSU123fusu",
+      "repo": "https://github.com/FUSU123fusu/dsh-tui-checkpoints",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "回溯"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-17"
     }
   ]
 }
