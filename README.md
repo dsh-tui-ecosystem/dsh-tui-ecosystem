@@ -24,7 +24,7 @@
 
 | 项目 | 类型 | 说明 |
 | --- | --- | --- |
-| [YesPlayMusic ypm skill](https://github.com/nagi-studio/YesPlayMusic/tree/master/skills/dsh/ypm) | 技能 | 让 dsh 的 agent 控制本机 YesPlayMusic 音乐播放：查在放的歌、暂停/继续、切歌 |
+| [YesPlayMusic ypm skill](https://github.com/nagi-studio/YesPlayMusic/tree/master/skills/ypm) | 技能 | 让 dsh 的 agent 控制本机 YesPlayMusic 音乐播放：查在放的歌、暂停/继续、切歌 |
 
 ## 收录规则（轻治理）
 
