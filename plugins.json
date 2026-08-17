@@ -179,6 +179,20 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-17"
+    },
+    {
+      "name": "dsh-tui-jobs",
+      "displayName": "dsh-tui-jobs",
+      "description": "为 dsh-TUI 补齐后台任务列表面板：`/jobs` 实时查看、读取终态输出、安全取消运行中任务。安装：`dsh plugin --profile <你的profile> add dsh-tui-jobs`",
+      "author": "FUSU123fusu",
+      "repo": "https://github.com/FUSU123fusu/dsh-tui-jobs",
+      "npm": null,
+      "tags": [
+        "TUI"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-17"
     }
   ]
 }
