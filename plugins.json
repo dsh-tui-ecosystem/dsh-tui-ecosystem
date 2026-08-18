@@ -195,6 +195,25 @@
       "addedAt": "2026-08-17"
     },
     {
+      "name": "dsh-tui-remote",
+      "displayName": "dsh-TUI Remote",
+      "description": "面向 dsh-TUI 的 Live + Daemon 双模式远程控制插件；当前已交付 Live MVP，支持连接管理、主机监控、远端 workspace 与命令执行，Daemon mode 按 roadmap 推进。",
+      "author": "GeekCmore",
+      "repo": "https://github.com/GeekCmore/dsh-tui-remote",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "SSH",
+        "远程开发",
+        "Live Mode",
+        "Daemon Mode",
+        "Workspace"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-17"
+    },
+    {
       "name": "dsh-tui-cron",
       "displayName": "dsh-tui-cron",
       "description": "为 dsh-TUI 添加定时任务能力：用 /cron 设定标准 5 段 cron 计划，到点自动将提示词作为后续用户消息发入当前会话，不打断正在运行的轮次。安装：dsh plugin add dsh-tui-cron",
