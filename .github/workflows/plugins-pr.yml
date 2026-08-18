@@ -31,7 +31,6 @@ jobs:
   ai-review:
     name: AI 审查
     needs: validate
-    if: secrets.DEEPSEEK_API_KEY != ''
     runs-on: ubuntu-latest
     outputs:
       verdict: ${{ steps.ai.outputs.verdict }}
