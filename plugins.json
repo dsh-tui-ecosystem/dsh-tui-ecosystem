@@ -212,6 +212,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-17"
+    },
+    {
+      "name": "dsh-tui-cron",
+      "displayName": "dsh-tui-cron",
+      "description": "为 dsh-TUI 添加定时任务能力：用 /cron 设定标准 5 段 cron 计划，到点自动将提示词作为后续用户消息发入当前会话，不打断正在运行的轮次。安装：dsh plugin add dsh-tui-cron",
+      "author": "FUSU123fusu",
+      "repo": "https://github.com/FUSU123fusu/dsh-tui-cron",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "定时任务"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-17"
     }
   ]
 }
