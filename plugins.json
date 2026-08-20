@@ -239,6 +239,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-20"
+    },
+    {
+      "name": "dsh-tui-subagents",
+      "displayName": "dsh-tui-subagents",
+      "description": "装上后可用 /subagents 实时跟踪子 agent 思考、工具调用与回复，支持轨迹回看、发消息纠偏和中断当前轮。安装：dsh plugin add dsh-tui-subagents",
+      "author": "FUSU123fusu",
+      "repo": "https://github.com/FUSU123fusu/dsh-tui-subagents",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "Agent"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-20"
     }
   ]
 }
