@@ -299,6 +299,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-20"
+    },
+    {
+      "name": "dsh-tui-filebrowser",
+      "displayName": "dsh-tui-filebrowser",
+      "description": "装上它你就能在 dsh-TUI 中获得全屏文件浏览：左侧文件树快照、右侧只读预览，支持 /edit 场景，纯只读不写文件，可配置忽略目录与预览上限。安装：dsh plugin add dsh-tui-filebrowser",
+      "author": "FUSU123fusu",
+      "repo": "https://github.com/FUSU123fusu/dsh-tui-filebrowser",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "文件浏览"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-20"
     }
   ]
 }
