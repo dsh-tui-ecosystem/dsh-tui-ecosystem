@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-19",
+  "updatedAt": "2026-08-20",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -224,6 +224,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-19"
+    },
+    {
+      "name": "dsh-tui-market",
+      "displayName": "dsh-tui-market",
+      "description": "在 dsh-TUI 内直接用 /market 浏览精选或全网插件、搜索、安装与移除，不用离开终端；安装：dsh plugin add dsh-tui-market。",
+      "author": "FUSU123fusu",
+      "repo": "https://github.com/FUSU123fusu/dsh-tui-market",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "市场"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-20"
     }
   ]
 }
