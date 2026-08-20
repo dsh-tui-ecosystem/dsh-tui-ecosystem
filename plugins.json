@@ -254,6 +254,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-20"
+    },
+    {
+      "name": "dsh-tui-keys",
+      "displayName": "dsh-tui-keys",
+      "description": "装上 dsh-tui-keys，即可用 /keys 打开全屏、分组、可搜索的 dsh-TUI 快捷键速查表，覆盖输入编辑、会话历史、视图面板等操作；安装：dsh plugin add dsh-tui-keys。",
+      "author": "FUSU123fusu",
+      "repo": "https://github.com/FUSU123fusu/dsh-tui-keys",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "密钥"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-20"
     }
   ]
 }
