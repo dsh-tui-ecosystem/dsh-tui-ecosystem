@@ -314,6 +314,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-20"
+    },
+    {
+      "name": "dsh-session-cleanup",
+      "displayName": "dsh-session-cleanup",
+      "description": "为 dsh-TUI 用户提供交互式会话清理：安全列出并删除会话，支持 macOS 回收站，适配 dsh-tui 与 pi-tui。安装：dsh plugin add dsh-session-cleanup",
+      "author": "hyein-cbio",
+      "repo": "https://github.com/hyein-cbio/dsh-session-cleanup",
+      "npm": null,
+      "tags": [
+        "session",
+        "dsh-plugin"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-20"
     }
   ]
 }
