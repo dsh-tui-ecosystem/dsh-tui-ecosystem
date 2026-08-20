@@ -284,6 +284,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-20"
+    },
+    {
+      "name": "dsh-code-memory",
+      "displayName": "dsh-code-memory",
+      "description": "为 dsh-TUI 增加三级跨会话记忆（global/project/session），自动召回相关记忆，提供 memory_write/search/get 工具与 /memory 命令，零外部依赖。安装：dsh plugin --profile dsh-tui add dsh-code-memory",
+      "author": "CikeSeven",
+      "repo": "https://github.com/dsh-tui-ecosystem/dsh-code-memory",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "记忆"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-20"
     }
   ]
 }
