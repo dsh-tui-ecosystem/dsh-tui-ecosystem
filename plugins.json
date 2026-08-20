@@ -269,6 +269,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-20"
+    },
+    {
+      "name": "dsh-music-player-tui",
+      "displayName": "dsh-music-player-tui",
+      "description": "为 dsh-TUI 添加本地音乐播放场景：/music 全屏操作，扫描常见音频格式，支持搜索、排序、循环、删除，退出场景音乐不中断。安装：dsh plugin add dsh-music-player-tui",
+      "author": "heshuren371",
+      "repo": "https://github.com/heshuren371/dsh-music-player-tui",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "音乐"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-20"
     }
   ]
 }
