@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-20",
+  "updatedAt": "2026-08-21",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -329,6 +329,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-20"
+    },
+    {
+      "name": "dsh-tui-herdr",
+      "displayName": "dsh-tui-herdr",
+      "description": "将 dsh-TUI 的会话生命周期状态实时同步到 Herdr 侧边栏，让 working/blocked/done 一目了然。安装：dsh plugin --profile dsh-tui add dsh-tui-herdr",
+      "author": "FUSU123fusu",
+      "repo": "https://github.com/FUSU123fusu/dsh-tui-herdr",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "herdr"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-21"
     }
   ]
 }
