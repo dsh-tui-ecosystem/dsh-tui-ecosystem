@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-21",
+  "updatedAt": "2026-08-22",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -212,14 +212,15 @@
     {
       "name": "dsh-tui-feishu",
       "displayName": "dsh-tui-feishu",
-      "description": "通过飞书远程遥控 dsh-TUI agent：扫码建机器人，私聊映射持久会话，流式回传回复，高险工具调用一键审批，并支持停止运行。安装：`dsh plugin add dsh-tui-feishu`。",
-      "author": "FUSU123fusu",
-      "repo": "https://github.com/FUSU123fusu/dsh-tui-feishu",
+      "description": "通过飞书远程遥控 dsh-TUI agent：扫码建机器人，私聊映射持久会话，流式回传回复与图片互传（入站图片经附件服务给视觉模型、出站远程图转 img_key），高险工具调用一键审批，并可停止运行。安装：`dsh plugin add dsh-tui-feishu`。",
+      "author": "Easyhoov",
+      "repo": "https://github.com/Easyhoov/dsh-tui-feishu",
       "npm": null,
       "tags": [
         "TUI",
         "飞书",
-        "远程"
+        "远程",
+        "图片"
       ],
       "kind": "plugin",
       "featured": false,
