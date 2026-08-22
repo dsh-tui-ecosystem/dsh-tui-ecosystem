@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-21",
+  "updatedAt": "2026-08-22",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -344,6 +344,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-21"
+    },
+    {
+      "name": "dsh-tui-vscode",
+      "displayName": "dsh-tui-vscode",
+      "description": "在 VS Code 中一键打开真实终端并运行 dsh-TUI，获得与 Claude Code 官方扩展几乎一致的多会话终端体验。安装：dsh plugin add dsh-tui-vscode",
+      "author": "baobaolaodie",
+      "repo": "https://github.com/baobaolaodie/dsh-tui-vscode",
+      "npm": null,
+      "tags": [
+        "dsh-plugin",
+        "dsh-tui"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-22"
     }
   ]
 }
