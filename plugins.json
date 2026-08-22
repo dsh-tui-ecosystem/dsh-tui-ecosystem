@@ -359,6 +359,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-22"
+    },
+    {
+      "name": "cc-dsh-notifier",
+      "displayName": "cc-dsh-notifier",
+      "description": "为 dsh-TUI 会话提供 Windows 桌面通知，点击通知即可还原窗口，覆盖权限请求、等待输入等场景。安装：dsh plugin add cc-dsh-notifier",
+      "author": "baobaolaodie",
+      "repo": "https://github.com/baobaolaodie/cc-dsh-notifier",
+      "npm": null,
+      "tags": [
+        "dsh-plugin",
+        "dsh-tui"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-22"
     }
   ]
 }
