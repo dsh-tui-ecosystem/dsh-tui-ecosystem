@@ -107,4 +107,7 @@ jobs:
             exit 0
           fi
           # fork PR 的 GITHUB_TOKEN 被 GitHub 禁止合并，这里使用独立 PAT 完成合并
-          gh pr merge ${{ github.event.pull_request.number }} --squash --repo ${{ github.repository }}
+          if gh pr merge ${{ github.event.pull_request.number }} --squash --repo ${{ github.repository }}; then
+            echo "✅ 已合并，触发网站重新部署"
+            gh workflow run deploy.yml --repo dsh-tui-ecosystem/dsh-tui-site || echo "::warning::触发网站部署失败（可稍后手动触发）"
+          fi

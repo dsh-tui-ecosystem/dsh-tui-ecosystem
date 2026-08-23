@@ -66,6 +66,16 @@ jobs:
                 })
                 console.log(`#${pr.number}: 已合并 ✅`)
                 merged++
+                // 合并成功 → 触发网站（dsh-tui-site）重新部署，让插件市场数据上线
+                try {
+                  execSync(`gh workflow run deploy.yml --repo dsh-tui-ecosystem/dsh-tui-site`, {
+                    encoding: 'utf8',
+                    env: { ...process.env, GH_TOKEN: process.env.MERGE_TOKEN },
+                  })
+                  console.log(`#${pr.number}: 已触发网站重新部署 ✅`)
+                } catch (e2) {
+                  console.log(`#${pr.number}: 触发网站部署失败: ${String(e2.stderr || e2.message).slice(0, 200)}`)
+                }
               } catch (e) {
                 const msg = String(e.stderr || e.message).slice(0, 300)
                 console.log(`#${pr.number}: 合并失败: ${msg}`)
