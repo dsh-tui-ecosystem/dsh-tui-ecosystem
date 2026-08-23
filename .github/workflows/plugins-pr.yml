@@ -31,7 +31,8 @@ jobs:
   ai-review:
     name: AI 审查
     needs: validate
-    if: secrets.DEEPSEEK_API_KEY != ''
+    # 注意：GitHub Actions 不允许在 if 条件里引用 secrets（会导致 workflow 文件无效），
+    # 所以这里不设 if；脚本内部会处理 DEEPSEEK_API_KEY 为空的情况（输出 skipped）。
     runs-on: ubuntu-latest
     outputs:
       verdict: ${{ steps.ai.outputs.verdict }}
