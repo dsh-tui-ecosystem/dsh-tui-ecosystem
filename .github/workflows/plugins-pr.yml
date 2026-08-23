@@ -11,7 +11,7 @@ on:
       - plugins.json
 
 permissions:
-  contents: write
+  contents: read
   pull-requests: write
 
 jobs:
@@ -97,14 +97,9 @@ jobs:
     if: always() && needs.validate.result == 'success' && (needs.ai-review.result == 'success' || needs.ai-review.result == 'skipped')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v7
-        with:
-          script: |
-            const { owner, repo } = context.repo
-            const pr = context.payload.pull_request
-            await github.rest.pulls.createReview({
-              owner, repo, pull_number: pr.number,
-              event: 'APPROVE',
-              body: '✅ 收录标准校验通过，自动合并',
-            })
-            await github.rest.pulls.merge({ owner, repo, pull_number: pr.number, merge_method: 'squash' })
+      - name: 批准并启用自动合并
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr review ${{ github.event.pull_request.number }} --approve --repo ${{ github.repository }} --body '✅ 收录标准校验通过，自动合并' || true
+          gh pr merge ${{ github.event.pull_request.number }} --squash --auto --repo ${{ github.repository }}
