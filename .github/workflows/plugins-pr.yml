@@ -1,8 +1,11 @@
 name: plugins-pr
 # PR 改 plugins.json 时自动校验收录标准 → AI 审查 → 通过后自动合并
+# 使用 pull_request_target：workflow 在仓库基础分支上下文运行，可获得 secrets 与写权限
+# （pull_request 事件下 fork PR 拿不到 secrets、token 只读，AI 审查与自动合并都无法工作）。
+# 安全约束：绝不 checkout 并执行 PR 的代码；PR 数据一律通过 GitHub API 获取（见 validate 脚本）。
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened]
     paths:
       - plugins.json
@@ -27,6 +30,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
 
   ai-review:
     name: AI 审查

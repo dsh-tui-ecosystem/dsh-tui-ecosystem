@@ -1,6 +1,5 @@
 // dsh-tui-ecosystem PR 校验脚本：plugins.json 变更时自动检查收录标准。
 // 运行于 GitHub Actions（node 20+）。失败时输出 ::error:: 工作流命令。
-import { readFile } from 'node:fs/promises'
 import { execSync } from 'node:child_process'
 
 const GH = 'https://api.github.com'
@@ -25,19 +24,26 @@ const api = async (path, accept) => {
 }
 
 // 1. 当前文件必须合法
+// 注意：本 workflow 使用 pull_request_target，checkout 到的是 base 分支代码，
+// 因此 PR 修改后的 plugins.json 必须通过 GitHub API 从 PR head 获取，而不是读本地文件。
+const [owner, repo] = (process.env.GITHUB_REPOSITORY || 'dsh-tui-ecosystem/dsh-tui-ecosystem').split('/')
+const headSha = process.env.HEAD_SHA || ''
 let data
 try {
-  data = JSON.parse(await readFile('plugins.json', 'utf8'))
+  const res = await api(`/repos/${owner}/${repo}/contents/plugins.json?ref=${encodeURIComponent(headSha)}`)
+  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+  const meta = await res.json()
+  data = JSON.parse(Buffer.from(meta.content, 'base64').toString('utf8'))
 } catch (e) {
   console.log(`::error::plugins.json 不是合法 JSON：${e.message}`)
   process.exit(1)
 }
 if (!Array.isArray(data.plugins)) errors.push('plugins 字段必须是数组')
 
-// 2. 与 main 对比，找出新增条目
+// 2. 与 main 对比，找出新增条目（HEAD 即 base 分支，等同 main）
 let baseRepos = new Set()
 try {
-  baseRepos = new Set((JSON.parse(execSync('git show origin/main:plugins.json', { encoding: 'utf8' })).plugins || []).map((p) => (p.repo || '').toLowerCase()))
+  baseRepos = new Set((JSON.parse(execSync('git show HEAD:plugins.json', { encoding: 'utf8' })).plugins || []).map((p) => (p.repo || '').toLowerCase()))
 } catch {
   // 首个 PR 或 main 不存在时跳过对比
 }
