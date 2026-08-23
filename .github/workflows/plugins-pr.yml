@@ -97,9 +97,14 @@ jobs:
     if: always() && needs.validate.result == 'success' && (needs.ai-review.result == 'success' || needs.ai-review.result == 'skipped')
     runs-on: ubuntu-latest
     steps:
-      - name: 批准并启用自动合并
+      - name: 批准并自动合并
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.MERGE_TOKEN }}
         run: |
           gh pr review ${{ github.event.pull_request.number }} --approve --repo ${{ github.repository }} --body '✅ 收录标准校验通过，自动合并' || true
-          gh pr merge ${{ github.event.pull_request.number }} --squash --auto --repo ${{ github.repository }}
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::未配置 MERGE_TOKEN secret（仓库 Settings → Secrets），跳过自动合并，请人工合并"
+            exit 0
+          fi
+          # fork PR 的 GITHUB_TOKEN 被 GitHub 禁止合并，这里使用独立 PAT 完成合并
+          gh pr merge ${{ github.event.pull_request.number }} --squash --repo ${{ github.repository }}
