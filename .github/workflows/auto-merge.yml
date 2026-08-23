@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v7
+        env:
+          MERGE_TOKEN: ${{ secrets.MERGE_TOKEN }}
         with:
           script: |
             const { owner, repo } = context.repo
@@ -51,15 +53,25 @@ jobs:
               } catch (e) {
                 console.log(`#${pr.number}: approve 跳过（可能已批准）: ${e.message}`)
               }
+              if (!process.env.MERGE_TOKEN) {
+                console.log(`#${pr.number}: 未配置 MERGE_TOKEN，跳过合并（请人工合并）`)
+                continue
+              }
               try {
-                await github.rest.pulls.merge({ owner, repo, pull_number: pr.number, merge_method: 'squash' })
+                // GITHUB_TOKEN 被 GitHub 禁止合并 fork PR，这里使用独立 PAT（MERGE_TOKEN）
+                const { execSync } = require('node:child_process')
+                execSync(`gh pr merge ${pr.number} --squash --repo ${owner}/${repo}`, {
+                  encoding: 'utf8',
+                  env: { ...process.env, GH_TOKEN: process.env.MERGE_TOKEN },
+                })
                 console.log(`#${pr.number}: 已合并 ✅`)
                 merged++
               } catch (e) {
-                console.log(`#${pr.number}: 合并失败: ${e.message}`)
+                const msg = String(e.stderr || e.message).slice(0, 300)
+                console.log(`#${pr.number}: 合并失败: ${msg}`)
                 await github.rest.issues.createComment({
                   owner, repo, issue_number: pr.number,
-                  body: `⚠️ 自动合并失败：${String(e.message).slice(0, 200)}（常见原因：与 main 冲突，请 rebase 后重试）`,
+                  body: `⚠️ 自动合并失败：${msg}（常见原因：与 main 冲突，请 rebase 后重试）`,
                 }).catch(() => {})
               }
             }
