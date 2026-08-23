@@ -1,0 +1,66 @@
+name: auto-merge
+# 每 5 分钟扫描：plugins-pr 流水线（收录校验 + AI 审查）全部通过的 open PR，自动批准并合并。
+# 背景：fork PR 触发的 workflow（pull_request_target）里 GITHUB_TOKEN 被 GitHub 禁止 merge，
+# 而 schedule/workflow_dispatch 触发的 workflow 拥有完整仓库权限，可正常合并。
+# 条件：PR 最新 head 上「收录标准校验」「AI 审查」两个 check 均为 success。
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  merge-approved:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo
+            const { data: pulls } = await github.rest.pulls.list({
+              owner, repo, state: 'open', sort: 'updated', direction: 'desc', per_page: 50,
+            })
+            let merged = 0
+            for (const pr of pulls) {
+              // 只处理有收录流水线 check 的 PR（改 plugins.json 的 PR）
+              const { data: checks } = await github.rest.checks.listForRef({
+                owner, repo, ref: pr.head.sha, per_page: 100,
+              })
+              const wanted = ['收录标准校验', 'AI 审查']
+              const found = {}
+              for (const c of checks.check_runs) {
+                if (wanted.includes(c.name) && c.status === 'completed') {
+                  found[c.name] = c.conclusion
+                }
+              }
+              const allPass = wanted.every((n) => found[n] === 'success')
+              if (!allPass) {
+                console.log(`#${pr.number} ${pr.title}: 未通过（${JSON.stringify(found)}），跳过`)
+                continue
+              }
+              console.log(`#${pr.number} ${pr.title}: 校验+AI 通过，尝试合并`)
+              try {
+                await github.rest.pulls.createReview({
+                  owner, repo, pull_number: pr.number,
+                  event: 'APPROVE', body: '✅ 收录标准校验 + AI 审查通过，自动合并（auto-merge 扫描）',
+                })
+              } catch (e) {
+                console.log(`#${pr.number}: approve 跳过（可能已批准）: ${e.message}`)
+              }
+              try {
+                await github.rest.pulls.merge({ owner, repo, pull_number: pr.number, merge_method: 'squash' })
+                console.log(`#${pr.number}: 已合并 ✅`)
+                merged++
+              } catch (e) {
+                console.log(`#${pr.number}: 合并失败: ${e.message}`)
+                await github.rest.issues.createComment({
+                  owner, repo, issue_number: pr.number,
+                  body: `⚠️ 自动合并失败：${String(e.message).slice(0, 200)}（常见原因：与 main 冲突，请 rebase 后重试）`,
+                }).catch(() => {})
+              }
+            }
+            console.log(`扫描完成，本次合并 ${merged} 个 PR`)
