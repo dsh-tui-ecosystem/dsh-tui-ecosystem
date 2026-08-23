@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-22",
+  "updatedAt": "2026-08-23",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -374,6 +374,23 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-22"
+    },
+    {
+      "name": "dsh-tui-theme",
+      "displayName": "dsh-tui-theme",
+      "description": "樱花粉主题包：昼樱/夜樱/ANSI 三套全键覆盖调色板，终端背景自动跟随（OSC 11，昼樱↔夜樱自动切换），✿ 状态行（花符/时钟/轮数）与 /settings 设置面板。安装：dsh plugin add dsh-tui-theme",
+      "author": "xiaoxiaohaigui",
+      "repo": "https://github.com/xiaoxiaohaigui/dsh-tui-theme",
+      "npm": "dsh-tui-theme",
+      "tags": [
+        "主题",
+        "粉色",
+        "状态栏",
+        "TUI"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-23"
     }
   ]
 }
