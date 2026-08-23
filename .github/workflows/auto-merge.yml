@@ -69,10 +69,7 @@ jobs:
               } catch (e) {
                 const msg = String(e.stderr || e.message).slice(0, 300)
                 console.log(`#${pr.number}: 合并失败: ${msg}`)
-                await github.rest.issues.createComment({
-                  owner, repo, issue_number: pr.number,
-                  body: `⚠️ 自动合并失败：${msg}（常见原因：与 main 冲突，请 rebase 后重试）`,
-                }).catch(() => {})
+                // 不重复评论（避免每 5 分钟刷屏），冲突 PR 由作者 rebase 后自动重试
               }
             }
             console.log(`扫描完成，本次合并 ${merged} 个 PR`)
