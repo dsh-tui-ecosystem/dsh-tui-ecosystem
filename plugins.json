@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-23",
+  "updatedAt": "2026-08-24",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -411,6 +411,22 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-23"
+    },
+    {
+      "name": "dsh-ua-headers",
+      "displayName": "dsh-ua-headers",
+      "description": "按模型匹配改写 User-Agent 并合并自定义请求头：声明式设置项 + 标准 LocalStorage 存储，遵循 dsh-ecosystem-spec v0.15。安装：dsh plugin --profile web add dsh-ua-headers",
+      "author": "fplj-fplj",
+      "repo": "https://github.com/fplj-fplj/dsh-ua-headers",
+      "npm": "dsh-ua-headers",
+      "tags": [
+        "User-Agent",
+        "请求头",
+        "dsh-plugin"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-24"
     }
   ]
 }
