@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-24",
+  "updatedAt": "2026-08-25",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -427,6 +427,24 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-24"
+    },
+    {
+      "name": "dsh-plugin-bridge",
+      "displayName": "dsh-plugin-bridge",
+      "description": "跨预设会话迁移插件：通过可预览的五段式交接，保留状态、源模型意图与未决图片，原会话不被改动。安装：dsh plugin add dsh-plugin-bridge",
+      "author": "Totoro-qaq",
+      "repo": "https://github.com/Totoro-qaq/dsh-plugin-bridge",
+      "npm": null,
+      "tags": [
+        "模式间切换",
+        "会话迁移",
+        "Agent",
+        "WebUI",
+        "工作流"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-25"
     }
   ]
 }
