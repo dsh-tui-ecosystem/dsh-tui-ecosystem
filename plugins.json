@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-25",
+  "updatedAt": "2026-08-26",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -445,6 +445,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-25"
+    },
+    {
+      "name": "dsh-tui-mcp-manager",
+      "displayName": "dsh-tui-mcp-manager",
+      "description": "为 dsh-TUI 提供原生 MCP Server 管理能力：通过 /mcp-manager 浮窗完成 MCP CRUD、启停、Sets、Inspector、Tool schema 与凭据引用管理，配置原子写入当前 profile。安装：dsh plugin add dsh-tui-mcp-manager",
+      "author": "0N3-0",
+      "repo": "https://github.com/0N3-0/dsh-tui-mcp-manager",
+      "npm": null,
+      "tags": [
+        "mcp",
+        "TUI"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-26"
     }
   ]
 }
