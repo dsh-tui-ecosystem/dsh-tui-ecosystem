@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-26",
+  "updatedAt": "2026-08-30",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -460,6 +460,22 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-26"
+    },
+    {
+      "name": "dsh-tui-find",
+      "displayName": "dsh-tui-find",
+      "description": "跨会话全文搜索插件：/find 或 Ctrl+Shift+F 对本机全部 dsh 会话（默认 zstd 帧链压缩、兼容明文 JSONL）即时检索，命中词高亮、按会话分组，支持只读预览、复制原文与二次确认恢复会话；全程只读、无落盘索引。安装：dsh plugin --profile dsh-tui add -w dsh-tui-find@latest",
+      "author": "xiaoxiaohaigui",
+      "repo": "https://github.com/xiaoxiaohaigui/dsh-tui-find",
+      "npm": "dsh-tui-find",
+      "tags": [
+        "搜索",
+        "会话",
+        "TUI"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-30"
     }
   ]
 }
