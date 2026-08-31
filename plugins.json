@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-30",
+  "updatedAt": "2026-08-31",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -476,6 +476,23 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-30"
+    },
+    {
+      "name": "dsh-music-tui",
+      "displayName": "dsh Music TUI",
+      "description": "在 dsh-TUI 里用 /music 查看并控制后台运行的 YesPlayMusic TUI：三行播放条展示封面、曲名与进度，支持播放暂停、切歌和点击/拖动 seek。",
+      "author": "Nagi-ovo",
+      "repo": "https://github.com/Nagi-ovo/dsh-music-tui",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "音乐",
+        "YesPlayMusic",
+        "状态栏"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-08-31"
     }
   ]
 }
