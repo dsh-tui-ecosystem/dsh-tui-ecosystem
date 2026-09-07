@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-08-31",
+  "updatedAt": "2026-09-07",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -493,6 +493,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-08-31"
+    },
+    {
+      "name": "dsh-layered-memory",
+      "displayName": "dsh-layered-memory",
+      "description": "为 DeepSeek Harness 提供跨会话长期记忆：自动记住用户身份、项目与偏好，新会话带出背景，生活/工作记忆分离，零配置无感运行。安装：dsh plugin add dsh-layered-memory",
+      "author": "JunNanLYS",
+      "repo": "https://github.com/JunNanLYS/dsh-layered-memory",
+      "npm": null,
+      "tags": [
+        "让dsh更懂你",
+        "生活工作分开"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-09-07"
     }
   ]
 }
