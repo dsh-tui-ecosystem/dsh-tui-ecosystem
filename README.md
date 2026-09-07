@@ -20,6 +20,12 @@
 3. 完成后把你的仓库链接提交到本 README 的收录列表（PR 即可），
    或提交到核心仓库的 [docs/links.md](https://github.com/ccch1mneyyy/dsh-TUI/blob/main/docs/links.md)。
 
+## 社区收录
+
+| 项目 | 类型 | 说明 |
+| --- | --- | --- |
+| [YesPlayMusic ypm skill](https://github.com/nagi-studio/YesPlayMusic/tree/master/skills/ypm) | 技能 | 让 dsh 的 agent 控制本机 YesPlayMusic 音乐播放：查在放的歌、暂停/继续、切歌 |
+
 ## 收录规则（轻治理）
 
 - 插件作者对自己的仓库拥有完全所有权；组织成员只维护自己的插件仓库。
