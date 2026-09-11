@@ -11,6 +11,7 @@
 | 仓库 | 说明 |
 | --- | --- |
 | [plugin-template](plugin-template/) | 插件模板：从零到一个能跑的 Cordis 插件，5 分钟起步 |
+| [dsh-open-path](https://github.com/VviLliAm-qwq/dsh-open-path) | `/open` 命令：路径 / http(s) URL / 裸域名直达 + 工作区模糊搜索（Community v0.15 manifest，MIT） |
 
 ## 想做一个插件？
 
