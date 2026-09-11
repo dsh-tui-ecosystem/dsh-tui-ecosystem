@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-11",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -508,6 +508,20 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-09-07"
+    },
+    {
+      "name": "dsh-open-path",
+      "displayName": "dsh-open-path",
+      "description": "为 dsh-TUI 添加 /open 命令，一键用系统默认程序打开文件、文件夹与 http(s) 链接，支持工作区模糊搜索与裸域名补全。安装：dsh plugin add dsh-open-path（装后在 TUI 内 /restart 生效）。",
+      "author": "VviLliAm-qwq",
+      "repo": "https://github.com/VviLliAm-qwq/dsh-open-path",
+      "npm": null,
+      "tags": [
+        "指令"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-09-11"
     }
   ]
 }
