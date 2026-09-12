@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-09-11",
+  "updatedAt": "2026-09-12",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -522,6 +522,20 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-09-11"
+    },
+    {
+      "name": "dsh-peak-balance",
+      "displayName": "dsh-peak-balance",
+      "description": "在 dsh-TUI 提示符上方实时显示 DeepSeek 峰谷计费时段、账户余额与单轮花费，峰时闪烁警告，并可用 /hist 查看 token 历史热力图。安装：dsh plugin add dsh-peak-balance",
+      "author": "VviLliAm-qwq",
+      "repo": "https://github.com/VviLliAm-qwq/dsh-peak-balance",
+      "npm": null,
+      "tags": [
+        "余额峰谷用量显示"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-09-12"
     }
   ]
 }
