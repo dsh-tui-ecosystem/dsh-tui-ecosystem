@@ -554,6 +554,22 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-09-13"
+    },
+    {
+      "name": "dsh-open-terminal",
+      "displayName": "dsh-open-terminal",
+      "description": "在 dsh-TUI 中用 /term 快速在任意工作区文件夹打开系统终端，支持路径、~ 与模糊匹配选择，省去手动切换目录。安装：dsh plugin add dsh-open-terminal",
+      "author": "VviLliAm-qwq",
+      "repo": "https://github.com/VviLliAm-qwq/dsh-open-terminal",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "终端",
+        "工具"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-09-13"
     }
   ]
 }
