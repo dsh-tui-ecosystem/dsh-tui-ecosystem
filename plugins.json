@@ -570,6 +570,23 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-09-13"
+    },
+    {
+      "name": "dsh-console-utf8",
+      "displayName": "dsh-console-utf8",
+      "description": "针对 Windows 上 dsh 主机和 bash 工具命令输出乱码的问题，该插件会自动把控制台代码页切换并校验为 UTF-8（65001），让 PowerShell、cmd、git 等 Windows 原生子进程返回的中文、日文等非 ASCII 字符能够被正确解码显示，而不是变成一串替换符号。使用后无需手动执行 chcp 命令。安装方式：dsh plugin add dsh-console-utf8",
+      "author": "VviLliAm-qwq",
+      "repo": "https://github.com/VviLliAm-qwq/dsh-console-utf8",
+      "npm": null,
+      "tags": [
+        "Windows",
+        "编码",
+        "UTF-8",
+        "工具"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-09-13"
     }
   ]
 }
