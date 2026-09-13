@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-09-12",
+  "updatedAt": "2026-09-13",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -536,6 +536,24 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-09-12"
+    },
+    {
+      "name": "dsh-mama-cheer",
+      "displayName": "dsh-mama-cheer",
+      "description": "按下 Ctrl+Alt+M 即可向正在运行的 dsh-TUI 会话注入一句可配置的鼓励语，智能选择 steer 或在流式文本时中断投递，不打断执行中的工具调用。安装：dsh plugin add dsh-mama-cheer",
+      "author": "VviLliAm-qwq",
+      "repo": "https://github.com/VviLliAm-qwq/dsh-mama-cheer",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "快捷键",
+        "插话",
+        "Agent",
+        "设置"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-09-13"
     }
   ]
 }
