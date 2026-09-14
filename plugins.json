@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-09-13",
+  "updatedAt": "2026-09-14",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -587,6 +587,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-09-13"
+    },
+    {
+      "name": "dsh-tui-exit-banner",
+      "displayName": "dsh-tui-exit-banner",
+      "description": "为 dsh-TUI 补上退出回执：退出时打印大号 DeepSeek Logo、会话标题与恢复命令，避免原生提示被清屏冲掉，空会话自动静默退出。安装：dsh plugin --profile dsh-tui add dsh-tui-exit-banner",
+      "author": "xsflyer001",
+      "repo": "https://github.com/xsflyer001/dsh-tui-exit-banner",
+      "npm": null,
+      "tags": [
+        "TUI",
+        "退出回执"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-09-14"
     }
   ]
 }
