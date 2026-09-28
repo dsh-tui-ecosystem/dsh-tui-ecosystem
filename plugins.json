@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-09-14",
+  "updatedAt": "2026-09-28",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -602,6 +602,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-09-14"
+    },
+    {
+      "name": "dsh-tui-session-manager",
+      "displayName": "dsh-tui-session-manager",
+      "description": "为 dsh-TUI 补上 /sessions 全屏会话管理器：按工作区分组浏览、实时过滤、多选并真正删除会话，并清理宿主删除路径遗留的状态残留，杜绝 /resume 幽灵条目。安装：dsh plugin add dsh-tui-session-manager",
+      "author": "BoweiDuan",
+      "repo": "https://github.com/BoweiDuan/dsh-tui-session-manager",
+      "npm": null,
+      "tags": [
+        "插件",
+        "会话管理"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-09-28"
     }
   ]
 }
