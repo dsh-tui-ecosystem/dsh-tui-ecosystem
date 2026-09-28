@@ -631,6 +631,20 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-09-28"
+    },
+    {
+      "name": "dsh-tui-pkg",
+      "displayName": "dsh-tui-pkg",
+      "description": "装上它即可在 dsh-TUI 终端内用 /pkg 全屏面板浏览、安装、卸载、启停插件并自动探测新版本，全程无需离开终端。安装：dsh plugin add dsh-tui-pkg",
+      "author": "whos12jackson",
+      "repo": "https://github.com/Whos12Jackson/dsh-tui-pkg",
+      "npm": null,
+      "tags": [
+        "插件管理"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-09-28"
     }
   ]
 }
