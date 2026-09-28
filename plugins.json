@@ -617,6 +617,20 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-09-28"
+    },
+    {
+      "name": "dsh-xiaomi-tts",
+      "displayName": "dsh-xiaomi-tts",
+      "description": "为 DSH 的助手回复加上语音朗读：接入免费的 Xiaomi MiMo TTS，支持预置/自定义音色、流式低延迟播放与浏览器本地语音兜底，可调语速音量并自动清洗代码链接。安装：dsh plugin add dsh-xiaomi-tts",
+      "author": "ppy-web",
+      "repo": "https://github.com/ppy-web/dsh-plugin-xiaomi-mimo-tts",
+      "npm": null,
+      "tags": [
+        "语音"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-09-28"
     }
   ]
 }
