@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-09-28",
+  "updatedAt": "2026-10-11",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -645,6 +645,23 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-09-28"
+    },
+    {
+      "name": "dsh-tui-file-trace",
+      "displayName": "File Trace",
+      "description": "侧栏文件操作追踪：会话里每个 read/write/edit 一览，两级浏览（文件→操作→详情），编辑看红绿 diff、读取看正文、markdown 与 30+ 语言代码自动高亮，历史进会话即载。Web 版 dsh-file-trace 的 TUI 移植。",
+      "author": "lhh010",
+      "repo": "https://github.com/lhh010/dsh-tui-file-trace",
+      "npm": null,
+      "tags": [
+        "侧栏面板",
+        "文件追踪",
+        "diff",
+        "渲染"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-10-11"
     }
   ]
 }
