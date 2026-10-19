@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-19",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -660,6 +660,21 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-10-15"
+    },
+    {
+      "name": "dsh-pulse",
+      "displayName": "dsh-pulse",
+      "description": "装上它即可在 DeepSeek Harness 中查看跨会话 token 用量走势、热力图与逐模型费用估算，并与官方余额和订阅额度对账，数据全程留在本机。安装：dsh plugin add dsh-pulse",
+      "author": "Enc-hanted",
+      "repo": "https://github.com/Enc-hanted/dsh-pulse",
+      "npm": null,
+      "tags": [
+        "用量统计",
+        "热力图"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-10-19"
     }
   ]
 }
