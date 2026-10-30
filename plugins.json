@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-30",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -675,6 +675,18 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-10-19"
+    },
+    {
+      "name": "dsh-tui-cost-meter",
+      "displayName": "dsh-tui-cost-meter",
+      "description": "在 dsh-TUI 状态栏实时显示当前会话所用模型的额度与费用（Codex、DeepSeek、MiniMax、CommandCode），支持进度条配色、峰谷倒计时和 /settings 内调节。安装：dsh plugin add dsh-tui-cost-meter",
+      "author": "YakumoKuugen",
+      "repo": "https://github.com/YakumoKuugen/dsh-tui-cost-meter",
+      "npm": null,
+      "tags": [],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-10-30"
     }
   ]
 }
