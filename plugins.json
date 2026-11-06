@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-11-06",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -687,6 +687,23 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-10-30"
+    },
+    {
+      "name": "dsh-tui-workspace-sidebar",
+      "displayName": "dsh-tui-workspace-sidebar",
+      "description": "dsh-TUI 右侧收件箱侧边栏：按工作区列出运行中、未读、待回答与近期会话，点击即可跳转，支持新建会话、复制工作区路径与 /ws 面板。安装：dsh plugin --profile dsh-tui add dsh-tui-workspace-sidebar",
+      "author": "Ding-Kyoma",
+      "repo": "https://github.com/Ding-Kyoma/dsh-tui-workspace-sidebar",
+      "npm": "dsh-tui-workspace-sidebar",
+      "tags": [
+        "TUI",
+        "侧边栏",
+        "会话",
+        "Workspace"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-11-06"
     }
   ]
 }
