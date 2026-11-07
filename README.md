@@ -12,6 +12,12 @@
 | --- | --- |
 | [plugin-template](plugin-template/) | 插件模板：从零到一个能跑的 Cordis 插件，5 分钟起步 |
 
+## 社区插件
+
+| 插件 | 说明 |
+| --- | --- |
+| [dsh-retry-after](https://github.com/PandaAQI/dsh-retry-after) | 把 HTTP `Retry-After` 接进重试策略：pi-ai 路由会丢掉响应头，网关要求等 20 秒却被 500ms 后重试；装上后按服务端给的时间等（实测 2030ms，附设计文档） |
+
 ## 想做一个插件？
 
 1. 从 [`plugin-template`](plugin-template/) 克隆起步；
