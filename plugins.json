@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-09",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -704,6 +704,24 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-11-06"
+    },
+    {
+      "name": "my-power-dsh",
+      "displayName": "My Power DSH",
+      "description": "把专家名册、团队场景与 DAG 面板、按键状态行和 MPD 设置分区带进 dsh-TUI 会话。安装：dsh plugin --profile dsh-tui add @mpd-dsh/mpd",
+      "author": "HaroldZ32",
+      "repo": "https://github.com/HaroldZ32/My-Power-Dsh",
+      "npm": "https://www.npmjs.com/package/@mpd-dsh/mpd",
+      "tags": [
+        "团队",
+        "名册",
+        "DAG",
+        "状态行",
+        "设置"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-11-09"
     }
   ]
 }
