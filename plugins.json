@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-11-09",
+  "updatedAt": "2026-11-14",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -722,6 +722,22 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-11-09"
+    },
+    {
+      "name": "dsh-ccswitch-sync",
+      "displayName": "CC Switch Sync",
+      "description": "把 CC Switch 写在 web/desktop profile 里的 provider 与 MCP 镜像进 dsh-tui profile，底栏显示镜像新鲜度。安装：dsh plugin --profile dsh-tui add dsh-ccswitch-sync",
+      "author": "msyzzm",
+      "repo": "https://github.com/msyzzm/dsh-ccswitch-sync",
+      "npm": null,
+      "tags": [
+        "同步",
+        "配置",
+        "底栏"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-11-14"
     }
   ]
 }
