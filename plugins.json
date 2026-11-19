@@ -1,6 +1,6 @@
 {
   "$schema": "plugins 收录列表 · 作者提 PR 或经在线提交审批后更新；网站构建/运行时直接读取本文件",
-  "updatedAt": "2026-11-14",
+  "updatedAt": "2026-11-19",
   "plugins": [
     {
       "name": "dsh-tui",
@@ -738,6 +738,20 @@
       "kind": "plugin",
       "featured": false,
       "addedAt": "2026-11-14"
+    },
+    {
+      "name": "dsh-nvim",
+      "displayName": "dsh-nvim",
+      "description": "在 Neovim 分屏中直接运行完整 dsh-TUI，一键把当前文件或选区作为 @mention 上下文发送，安装：dsh plugin add dsh-nvim",
+      "author": "AlbinZhu",
+      "repo": "https://github.com/AlbinZhu/dsh.nvim",
+      "npm": null,
+      "tags": [
+        "dsh.nvim"
+      ],
+      "kind": "plugin",
+      "featured": false,
+      "addedAt": "2026-11-19"
     }
   ]
 }
